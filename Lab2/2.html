@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Анимация</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <style>
+        body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            animation: bg_style 5s linear infinite;
+        }
+
+            body div {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
+        .dashboard {
+            height:100%;
+            width:auto;
+            margin:auto;
+        }
+        .gauge{
+            height:90%;
+            width:auto;
+            margin-top:15%;
+            transform: rotate(30deg);
+            animation: rotate_gauge 5s linear infinite;
+        }
+
+        @keyframes rotate_gauge {
+            0% {
+                transform: rotate(30deg);
+            }
+            20% {
+                transform: rotate(130deg);
+            }
+            27% {
+                transform: rotate(110deg);
+            }
+            35% {
+                transform: rotate(210deg);
+            }
+            50% {
+                transform: rotate(240deg);
+            }
+            65% {
+                transform: rotate(70deg);
+            }
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+
+        @keyframes bg_style {
+            0% {
+                background-color:blue;
+            }
+
+            50% {
+                background-color: darkorange;
+            }
+
+
+
+            100% {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./dashboard.png" class="dashboard" />
+    </div>
+    <div>
+        <img src="./gauge.png" class="gauge" />
+    </div>
+</body>
+</html>
